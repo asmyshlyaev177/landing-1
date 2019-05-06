@@ -43,7 +43,6 @@
     &__left {
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
     }
 
@@ -53,48 +52,59 @@
     &__form {
         display: flex;
         align-items: center;
-    }
-
-    &__search-input {
         position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
     }
 
     &__icon-map {
         width: 19px;
         height: 24.85px;
         fill: $color-primary;
-        transform: translateX(250%);
+        z-index: 3;
+        position: absolute;
+        left: 1.65rem;
     }
 
+    $input-width: 29.6875rem;
     &__input {
-        width: 29.6875rem;
+        width: $input-width;
         // width: 80%;
         height: 3.875rem;
         border-radius: 31px;
         border: none;
+        padding: 0 4rem;
+        font-family: inherit;
+        font-size: 1.1875rem;
+        color: $color-blue-dark;
+
+        position: absolute;
+        left: 0;
 
         &::placeholder {
             color: $color-gray-light-3;
-            font-size: 1.1875rem;
-            transform: translateX(4rem);
         }
     }
 
+    $button-width: 5.5rem;
     &__search-button {
-        display: block;
+        display: inline-block;
         background-color: $color-primary;
         border-radius: 50px;
         border: none;
         height: 3.375rem;
-        width: 5.5rem;
-        transform: translateX(-103%);
+        width: $button-width;
+        transition: all .2s;
+
+        z-index: 3;
+        margin-left: $input-width - $button-width - .3rem;
+
+        &:active {
+            filter: brightness(98%);
+            transform: scale(.95);
+        }
     }
     &__icon-search {
-        width: 19px;
-        height: 24.85px;
+        width: 31.05px;
+        height: 30.45px;
         fill: $color-white;
     }
 

@@ -28,3 +28,13 @@ $container-padding: 8.4rem;
 .icon {
     display: inline-block;
 }
+
+input {
+    outline: none;
+}
+
+.btn,
+.btn:focus,
+.btn:active {
+    outline: none;
+}
