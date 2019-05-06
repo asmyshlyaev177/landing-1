@@ -5,20 +5,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
+    <!-- <script defer src="node_modules/svgxuse/svgxuse.js"></script> -->
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>Test title</title>
+    <title>CityMap project</title>
   </head>
 
-  <body>
+  <body class="container">
+
+    <nav class="nav">
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <div class="nav__logo">
+                    <div class="nav__icon"></div>
+                    <div class="nav__text">CityMap</div>
+                </div>
+            </li>
+            <li class="nav__item"><a href="#">About Us</a></li>
+            <li class="nav__item"><a href="#">Find Place</a></li>
+            <li class="nav__item"><a href="#">City Map</a></li>
+            <li class="nav__item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <img src="./img/wave-hero.svg" class="header__back" />
+
+        <div class="header__container">
+            <div class="header__left">
+                <h2 class="h2 header__title">Search Your Destination</h2>
+                <p class="paragraph paragraph--blue header__paragraph">Then select departure date, how long the trip will be and how many destinations to include. Users can also select if they want to look at cities in Europe, the European Union or just the Schengen Zone. </p>
+
+                <form action="#" class="header__form">
+                    <svg class="icon search__icon header__icon header__icon-map">
+                        <use xlink:href="img/sprite.svg#icon-map"></use>
+                    </svg>
+
+                    <input class="header__input" placeholder="Find your place here"></input>
+                    <button class="header__search-button">
+                        <svg class="icon header__icon header__icon-search">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header__right">
+                <img src="./img/hero.png" alt="Header image" class="header__img">
+            </div>
+        </div>
+
+    </header>
+
+    <section class="connect">
+
+    </section>
+
+    <section class="features">
+
+    </section>
+
+    <section class="app">
+
+    </section>
+
+    <footer class="footer">
+
+    </footer>
 
   </body>
+
 </html>

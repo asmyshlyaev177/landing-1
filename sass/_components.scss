@@ -1,0 +1,104 @@
+// NAV MENU
+.nav {
+    color: $color-white;
+    position: absolute;
+    padding: 2.5rem;
+    width: 100%;
+    z-index: 10;
+
+    &__menu {
+        display: flex;
+
+    }
+
+    &__item {
+        cursor: pointer;
+    }
+}
+
+// MAIN CONTAINER
+// .container {
+
+// }
+
+// HEADER (HERO)
+
+.header {
+    position: relative;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        color: $color-white;
+        padding: $container-padding;
+    }
+
+    &__back {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    // &__right {}
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search-input {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-map {
+        width: 19px;
+        height: 24.85px;
+        fill: $color-primary;
+        transform: translateX(250%);
+    }
+
+    &__input {
+        width: 29.6875rem;
+        // width: 80%;
+        height: 3.875rem;
+        border-radius: 31px;
+        border: none;
+
+        &::placeholder {
+            color: $color-gray-light-3;
+            font-size: 1.1875rem;
+            transform: translateX(4rem);
+        }
+    }
+
+    &__search-button {
+        display: block;
+        background-color: $color-primary;
+        border-radius: 50px;
+        border: none;
+        height: 3.375rem;
+        width: 5.5rem;
+        transform: translateX(-103%);
+    }
+    &__icon-search {
+        width: 19px;
+        height: 24.85px;
+        fill: $color-white;
+    }
+
+    &__paragraph {
+        margin-bottom: 3.625rem;
+    }
+}
