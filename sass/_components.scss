@@ -3,7 +3,7 @@
     color: $color-white;
     font-size: 1.125rem;
     position: absolute;
-    padding: 2.9rem $container-padding;
+    padding: 2.68% $container-padding;
     width: 100%;
     z-index: 10;
 
@@ -21,14 +21,14 @@
     &__icon {
         width: 1.625rem;
         height: 2.125rem;
-        margin-right: 5px;
+        margin-right: 6.8px;
         fill: $color-white;
     }
 
     &__item {
         cursor: pointer;
         transition: all .2s;
-        padding: 1rem .5rem;
+        padding: 1rem .21rem;
 
         &:hover {
             color: $color-primary;
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         color: $color-white;
-        padding: calc(#{$container-padding}*2 + 2rem) $container-padding $container-padding*2 $container-padding;
+        padding: calc(#{$container-padding} + 9.3vh) $container-padding $container-padding*2 $container-padding;
         justify-content: space-between;
 
         background-image: url("../img/wave-hero.svg");
@@ -64,7 +64,7 @@
     }
 
     &__title {
-        margin-bottom: 2.375rem;
+        margin-bottom: 2.6rem;
     }
 
     &__left {
@@ -73,12 +73,19 @@
         flex-shrink: 1;
         justify-content: center;
         flex-direction: column;
+        flex-basis: 50%;
     }
 
 
     &__right {
         flex-shrink: 0;
-        flex-basis: 55%;
+        flex-basis: 50%;
+        margin-top: -0.7rem;
+    }
+
+    &__img {
+        margin-left: -0.9rem;
+        width: 109%;
     }
 
     &__form {
@@ -88,8 +95,8 @@
     }
 
     &__icon-map {
-        width: 19px;
-        height: 24.85px;
+        width: 20px;
+        margin-left: 0.2rem;
         fill: $color-primary;
         z-index: 3;
         position: absolute;
@@ -97,22 +104,24 @@
     }
 
     // $input-width: 29.6875rem;
-    $input-width: 80%;
+    $input-width: 81.2%;
     &__input {
         width: $input-width;
-        height: 3.875rem;
+        height: 3.81rem;
         border-radius: 31px;
         border: none;
         padding: 0 4rem;
         font-family: inherit;
-        font-size: 1.1875rem;
+        font-size: 1.1rem;
         color: $color-blue-dark;
 
         position: absolute;
-        left: 0;
+        top: -0.239rem;
 
         &::placeholder {
             color: $color-gray-light-3;
+            padding-left: 0.35rem;
+            letter-spacing: 0.034rem;
         }
     }
 
@@ -122,12 +131,12 @@
         background-color: $color-primary;
         border-radius: 50px;
         border: none;
-        height: 3.375rem;
+        height: 3.4rem;
         width: $button-width;
         transition: all .2s;
 
         z-index: 3;
-        margin-left: calc(#{$input-width} - #{$button-width} - #{.3rem});
+        margin-left: calc(#{$input-width} - #{$button-width} - .2rem);
 
         &:active {
             filter: brightness(98%);
@@ -168,12 +177,39 @@
         width: 70%;
         height: 70%;
         margin-left: -85%;
-        transition: all .6s;
+        transition: filter .6s, transform .6s;
         filter: drop-shadow(1rem 3rem 2rem rgba($color-gray, .9));
 
         &:hover {
             filter: drop-shadow(1rem 5rem 2.5rem rgba($color-gray, .8));
             transform: translateY(-2rem);
+        }
+    }
+}
+
+.features {
+
+    &__img-start {
+
+    }
+
+    .feature {
+        &__text {
+
+        }
+
+        &__distance {
+
+        }
+        &__title.h2 {
+            color: red;
+        }
+        &__title.h3 {
+
+        }
+
+        &__img {
+
         }
     }
 }
