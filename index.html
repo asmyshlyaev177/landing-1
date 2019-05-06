@@ -19,12 +19,12 @@
 
     <nav class="nav">
         <ul class="nav__menu">
-            <li class="nav__item">
-                <div class="nav__logo">
-                    <div class="nav__icon"></div>
-                    <div class="nav__text">CityMap</div>
-                </div>
-            </li>
+            <div class="nav__logo">
+                <svg class="icon nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg>
+                <div class="nav__text">CityMap</div>
+            </div>
             <li class="nav__item"><a href="#">About Us</a></li>
             <li class="nav__item"><a href="#">Find Place</a></li>
             <li class="nav__item"><a href="#">City Map</a></li>
@@ -33,11 +33,10 @@
     </nav>
 
     <header class="header">
-        <img src="./img/wave-hero.svg" class="header__back" />
 
         <div class="header__container">
             <div class="header__left">
-                <h2 class="h2 header__title">Search Your Destination</h2>
+                <h2 class="h2 h2--white header__title">Search Your Destination</h2>
                 <p class="paragraph paragraph--blue header__paragraph">Then select departure date, how long the trip will be and how many destinations to include. Users can also select if they want to look at cities in Europe, the European Union or just the Schengen Zone. </p>
 
                 <form action="#" class="header__form">
@@ -62,7 +61,11 @@
     </header>
 
     <section class="connect">
+        <h2 class="h2">Get Start Search</h2>
+        <h3 class="h3">Connect with city map</h3>
+        <div class="connect_image">
 
+        </div>
     </section>
 
     <section class="features">

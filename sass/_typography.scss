@@ -12,7 +12,16 @@ $color-gray-light-3: #BDD3DF;
 .h2 {
     font-size: 3.125rem;
     font-weight: 700;
-    margin-bottom: 2.375rem;
+    color: $color-blue-dark;
+
+    &--white {
+        color: $color-white;
+    }
+}
+
+.h3 {
+    font-size: 3.125rem;
+    color: $color-blue-dark;
 }
 
 .paragraph {
