@@ -1,6 +1,7 @@
 
 // FONT VARIABLES
 $font-primary: 'Cabin', sans-serif;
+$font-secondary: sans-serif;
 
 // BREAKPOINTS
 $bp-phone: 20em;
@@ -9,6 +10,10 @@ $bp-phone-l: 26.5625em;
 $bp-tablet: 48em;
 $bp-laptop: 64em;
 $bp-desktop: 93.75em;
+
+// $container-padding: 8.4rem;
+$container-padding: 11.16%;
+
 
 *,
 *::before,
@@ -23,7 +28,6 @@ html {
     font-family: $font-primary;
 }
 
-$container-padding: 8.4rem;
 
 .icon {
     display: inline-block;
@@ -39,4 +43,9 @@ $container-padding: 8.4rem;
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.img {
+    width: 100%;
+    height: auto;
 }
