@@ -161,6 +161,7 @@
     align-items: center;
 
     padding: calc(#{$container-padding} - 0.5rem) $container-padding;
+    padding-bottom: 0;
 
     &__title {
         margin-left: -1rem;
@@ -201,28 +202,103 @@
 }
 
 .features {
+    background-image: url('../img/road.svg');
+    background-repeat: no-repeat;
+    background-position-x: 7.9rem;
+    background-position-y: -4rem;
+    padding: 7.8rem $container-padding $container-padding $container-padding;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__img-start {
+        position: absolute;
+        top: -9.5rem;
+        left: 13.3rem;
+    }
 
+    &__img-tree {
+        display: inline-block;
+        position: absolute;
+
+        &--1 {
+            transform: scale(1.15);
+            top: 4.2%;
+            left: 13.2%;
+        }
+
+        &--2 {
+            top: 45%;
+            right: 10.5rem;
+        }
+
+        &--3 {
+            transform: scale(.8);
+            top: 89.2%;
+            left: 12.4%;
+        }
     }
 
     .feature {
-        &__text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13.3rem 0;
+        margin-top: -0.5rem;
 
+        flex-basis: 70%;
+        flex-grow: 0;
+
+        &__text {
+            margin-left: 0.9rem;
+            margin-top: 1.2rem;
+            flex-basis: 40%;
         }
 
         &__distance {
+            font-size: 1.125rem;
+            display: inline-flex;
+            align-items: center;
 
+            svg {
+                fill: $color-primary;
+                width: 1.5rem;
+                height: 2rem;
+                margin-right: .5rem;
+            }
         }
         &__title.h2 {
-            color: red;
+            font-size: 2.1rem;
+            margin-top: 0.9rem;
+            margin-bottom: .4rem;
         }
         &__title.h3 {
-
+            font-size: 1.77rem;
+            margin-bottom: 1.1rem;
         }
 
         &__img {
-
+            margin-right: 4.8rem;
+            margin-top: -1rem;
         }
+
+        &:nth-of-type(2n + 2) {
+            margin-top: -0.3rem;
+            margin-left: -1rem;
+            .feature__img {
+                margin-left: 4.2rem;
+                margin-right: 0;
+                order: -1;
+            }
+            .feature__text {
+                margin-left: 4.7rem;
+            }
+        }
+
     }
+
+
 }

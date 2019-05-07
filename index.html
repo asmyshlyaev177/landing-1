@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <script defer src="node_modules/svgxuse/svgxuse.js"></script> -->
+    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
 
@@ -73,33 +73,57 @@
     </section>
 
     <section class="features">
-        <div class="features__img-start">
-            IMG
-        </div>
+
+        <span class="features__img-start">
+            <img src="./img/travelers.png" alt="Travelers image">
+        </span>
+        <span class="features__img-tree features__img-tree--1">
+            <img src="./img/tree.png" alt="tree image">
+        </span>
 
         <div class="feature">
             <div class="feature__text">
-                <div class="feature__distance">2.0km</div>
+                <div class="feature__distance">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#icon-map"></use>
+                    </svg>
+                    <span class="gray">2.0km</spa>
+                </div>
                 <div class="feature__title h2">BRAC ATM Booth</div>
                 <div class="feature__title h3">Connect with CityMap</div>
+                <p class="feature__paragraph paragraph gray">According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
             </div>
 
             <div class="feature__img">
-                IMG
+                <img src="./img/payments.png" alt="Payments image">
             </div>
         </div>
+
+        <span class="features__img-tree features__img-tree--2">
+            <img src="./img/tree.png" alt="tree image">
+        </span>
 
         <div class="feature">
             <div class="feature__text">
-                <div class="feature__distance">2.0km</div>
-                <div class="feature__title h2">BRAC ATM Booth</div>
+                <div class="feature__distance">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#icon-map"></use>
+                    </svg>
+                    <span class="gray">5.0km</span>
+                </div>
+                <div class="feature__title h2">City Govt Hospital</div>
                 <div class="feature__title h3">Connect with CityMap</div>
+                <p class="feature__paragraph paragraph gray">According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
             </div>
 
             <div class="feature__img">
-                IMG
+                <img src="./img/medicine.png" alt="Medicine image">
             </div>
         </div>
+
+        <span class="features__img-tree features__img-tree--3">
+            <img src="./img/tree.png" alt="tree image">
+        </span>
 
     </section>
 

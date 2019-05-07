@@ -12,6 +12,7 @@
     "prefix:css": "postcss --replace --config postcss.config.js css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "favicons": "node favicons.js",
+    "sprites": "svg-sprite-generate -d img/ -o img/sprite.svg",
     "build": "rm -rf css/* && npm-run-all compile:sass prefix:css compress:css favicons",
     "start-prod": "npm-run-all build devserver"
   },
