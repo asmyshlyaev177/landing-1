@@ -11,7 +11,8 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --replace --config postcss.config.js css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build": "rm -rf css/* && npm-run-all compile:sass prefix:css compress:css",
+    "favicons": "node favicons.js",
+    "build": "rm -rf css/* && npm-run-all compile:sass prefix:css compress:css favicons",
     "start-prod": "npm-run-all build devserver"
   },
   "author": "asmyshlyaev177@gmail.com",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
+    "favicons": "^5.3.0",
     "live-server": "^1.2.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
