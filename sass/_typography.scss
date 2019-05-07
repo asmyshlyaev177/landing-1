@@ -15,10 +15,6 @@ $color-gray-light-3: #BDD3DF;
     color: $color-blue-dark;
     margin-bottom: .9rem;
     letter-spacing: 0.07rem;
-
-    &--white {
-        color: $color-white;
-    }
 }
 
 .h3 {
@@ -41,6 +37,11 @@ $color-gray-light-3: #BDD3DF;
     &--blue {
         color: $color-primary-light;
     }
+}
+
+
+.white {
+    color: $color-white;
 }
 
 .gray {

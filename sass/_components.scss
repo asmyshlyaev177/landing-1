@@ -30,8 +30,16 @@
         transition: all .2s;
         padding: 1rem .21rem;
 
+        a {
+            border-bottom: 1px transparent solid;
+        }
+
         &:hover {
             color: $color-primary;
+
+            a {
+                border-bottom: 1px $color-primary solid;
+            }
         }
 
         &:not(:last-child) {
@@ -127,20 +135,24 @@
 
     $button-width: 5.5rem;
     &__search-button {
-        display: inline-block;
         background-color: $color-primary;
         border-radius: 50px;
-        border: none;
         height: 3.3rem;
         width: $button-width;
-        transition: all .2s;
 
-        z-index: 3;
         margin-left: calc(#{$input-width} - #{$button-width} - .2rem);
 
+
+        &:hover {
+            background-color: lighten($color-primary, 25%);
+        }
+
+        &:focus {
+            background-color: darken($color-primary, 5%);
+        }
+
         &:active {
-            filter: brightness(98%);
-            transform: scale(.95);
+            background-color: lighten($color-primary, 10%);
         }
     }
     &__icon-search {
@@ -206,7 +218,7 @@
     background-repeat: no-repeat;
     background-position-x: 7.9rem;
     background-position-y: -4rem;
-    padding: 7.8rem $container-padding $container-padding $container-padding;
+    padding: 7.8rem $container-padding $container-padding * 2 $container-padding;
     position: relative;
 
     display: flex;
@@ -301,4 +313,87 @@
     }
 
 
+}
+
+.app {
+    background-image: url("../img/wave-app.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3.75rem;
+    padding-top: 2.85rem;
+    padding-left: 11.25%;
+    padding-right: 11.25%;
+
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    &__img {
+        flex-basis: 62.3%;
+
+        img {
+            margin-left: -2.5rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 33.5%;
+
+        margin-left: -9.2rem;
+        margin-top: 6.2rem;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__paragraph {
+        color: $color-primary-light;
+        width: 90%;
+        line-height: 1.4;
+        margin-top: 0rem;
+        margin-bottom: 2.75rem;
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn-icon {
+        max-width: 1.5rem;
+        height: 1.3rem;
+        margin-left: .1rem;
+        margin-right: .6rem;
+    }
+
+    &__btn-download {
+        letter-spacing: 0.1em;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: rgba($color-primary, 0.2);
+        padding: 1rem 1.6rem;
+        border-radius: 24.5px;
+        width: 49%;
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: rgba($color-primary, 0.35);
+        }
+
+        &:focus {
+            background-color: rgba($color-primary, 0.15);
+        }
+
+        &:active {
+            background-color: darken(rgba($color-primary, 0.2), 5%);
+        }
+
+    }
 }

@@ -49,3 +49,17 @@ a {
     width: 100%;
     height: auto;
 }
+
+.btn {
+    display: inline-block;
+    border: none;
+    transition: all .2s;
+    cursor: pointer;
+    z-index: 3;
+    user-select: none;
+
+    &:active {
+        transform: scale(.97);
+    }
+
+}
