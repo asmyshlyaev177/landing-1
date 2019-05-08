@@ -1,3 +1,16 @@
+// logo
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    &__icon {
+        width: 1.625rem;
+        height: 2.125rem;
+        margin-right: 6.8px;
+    }
+}
+
 // NAV MENU
 .nav {
     color: $color-white;
@@ -12,16 +25,7 @@
         align-items: center;
     }
 
-    &__logo {
-        display: flex;
-        align-items: center;
-        margin-right: auto;
-    }
-
-    &__icon {
-        width: 1.625rem;
-        height: 2.125rem;
-        margin-right: 6.8px;
+    &__logo-icon {
         fill: $color-white;
     }
 
@@ -396,4 +400,8 @@
         }
 
     }
+}
+
+.footer {
+
 }

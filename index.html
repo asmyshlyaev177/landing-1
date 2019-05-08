@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
+    <!-- <script defer src="node_modules/svgxuse/svgxuse.js"></script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
 
@@ -22,11 +22,11 @@
 
     <nav class="nav">
         <ul class="nav__menu">
-            <div class="nav__logo">
-                <svg class="icon nav__icon">
+            <div class="logo">
+                <svg class="nav__logo-icon icon logo__icon">
                     <use xlink:href="img/sprite.svg#icon-map"></use>
                 </svg>
-                <div class="nav__text">CityMap</div>
+                <div class="logo__text">CityMap</div>
             </div>
             <li class="nav__item"><a href="#">About Us</a></li>
             <li class="nav__item"><a href="#">Find Place</a></li>
@@ -160,7 +160,69 @@
     </section>
 
     <footer class="footer">
+        <div class="footer__tree footer__tree--1">
+            <img src="img/tree1.png" />
+        </div>
+        <div class="footer__tree footer__tree--2">
+            <img src="img/tree1.png" />
+        </div>
 
+        <footer__lamp class="footer__lamp--1">
+            <svg>
+                <use xlink:href="./img/sprite.svg#lamp"></use>
+            </svg>
+        </footer__lamp>
+
+        <div class="footer__text-container">
+            <div class="footer__about">
+                <div class="footer__logo">
+                    <div class="logo">
+                        <svg class="icon footer__logo-icon">
+                            <use xlink:href="img/sprite.svg#icon-map"></use>
+                        </svg>
+                        <div class="logo__text">CityMap</div>
+                    </div>
+                </div>
+
+                <div class="footer__paragraph paragraph">
+                    Then select departure date, how long the trip will be and how many destinations to include. Users can also select if they want to look at cities in Europe, the European Union or just the Schengen Zone.
+                </div>
+
+                <div class="footer__social-fb">
+
+                </div>
+                <div class="footer__social-tw">
+
+                </div>
+                <div class="footer__social-gp">
+
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="footer__menu">
+            <li class="footer__menu-item"><a href="#">About us</a></li>
+            <li class="footer__menu-item"><a href="#">Contact</a></li>
+            <li class="footer__menu-item"><a href="#">FAQ</a></li>
+            <li class="footer__menu-item"><a href="#">Map</a></li>
+            <li class="footer__menu-item"><a href="#">Blog</a></li>
+            <li class="footer__menu-item"><a href="#">keywords</a></li>
+            <li class="footer__menu-item"><a href="#">Email</a></li>
+            <li class="footer__menu-item"><a href="#">Notification</a></li>
+            <li class="footer__menu-item"><a href="#">Settings</a></li>
+            <li class="footer__menu-item"><a href="#">Update</a></li>
+        </ul>
+
+        <div class="footer__copyright">
+            C 2019, design by <span>Shabuj Khan</span>, CSS and markup by <span>asmyshlyaev177</span>
+        </div>
+
+        <footer__lamp class="footer__lamp--2">
+            <svg>
+                <use xlink:href="./img/sprite.svg#lamp"></use>
+            </svg>
+        </footer__lamp>
     </footer>
 
   </body>
