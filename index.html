@@ -21,18 +21,28 @@
   <body class="container">
 
     <nav class="nav">
-        <ul class="nav__menu">
-            <div class="logo">
+        <div class="nav__menu">
+            <div class="nav__menu-mob">
+                <input type="checkbox">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+            </div>
+
+            <div class="logo nav__logo">
                 <svg class="nav__logo-icon icon logo__icon">
                     <use xlink:href="img/sprite.svg#icon-map"></use>
                 </svg>
                 <div class="logo__text">CityMap</div>
             </div>
-            <li class="nav__item"><a href="#">About Us</a></li>
-            <li class="nav__item"><a href="#">Find Place</a></li>
-            <li class="nav__item"><a href="#">City Map</a></li>
-            <li class="nav__item"><a href="#">Contact</a></li>
-        </ul>
+            <ul class="nav__menu-list">
+                <li class="nav__item"><a href="#">About Us</a></li>
+                <li class="nav__item"><a href="#">Find Place</a></li>
+                <li class="nav__item"><a href="#">City Map</a></li>
+                <li class="nav__item"><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
     </nav>
 
     <header class="header">
