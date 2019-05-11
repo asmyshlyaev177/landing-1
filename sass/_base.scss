@@ -9,11 +9,20 @@ $bp-phone-m: 23.4375em;
 $bp-phone-l: 26.5625em;
 $bp-tablet: 48em;
 $bp-laptop: 64em;
+$bp-laptop-l: 72em;
 $bp-desktop: 93.75em;
 
 $container-padding: 8.4rem;
+$container-padding-laptop: 4.2rem;
+$container-padding-tablet: 2.1rem;
+$container-padding-phone-m: 1rem;
 // $container-padding: 9.4%;
 
+@mixin resp($breakpoint, $pos: max-width) {
+    @media only screen and ($pos: $breakpoint) {
+        @content;
+    }
+}
 
 *,
 *::before,
@@ -26,6 +35,22 @@ $container-padding: 8.4rem;
 html {
     box-sizing: border-box;
     font-family: $font-primary;
+
+    @include resp($bp-desktop, min-width) {
+        font-size: 135%;
+    }
+
+    @include resp($bp-desktop) {
+        font-size: 90%;
+    }
+
+    @include resp($bp-laptop-l) {
+        font-size: 85%;
+    }
+
+    @include resp($bp-phone-m) {
+        font-size: 80%;
+    }
 }
 
 
