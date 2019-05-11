@@ -33,16 +33,23 @@
         cursor: pointer;
         transition: all .2s;
         padding: 1rem .21rem;
+        overflow: hidden;
 
-        a {
-            border-bottom: 1px transparent solid;
+        a::after {
+            content: "";
+            height: 2px;
+            display: inline-block;
+            width: 100%;
+            background-color: $color-primary;
+            transform: translateX(-120%);
+            transition: all .2s;
         }
 
         &:hover {
             color: $color-primary;
 
-            a {
-                border-bottom: 1px $color-primary solid;
+            a::after {
+                transform: translateX(0);
             }
         }
 
@@ -220,7 +227,8 @@
 .features {
     background-image: url('../img/road.svg');
     background-repeat: no-repeat;
-    background-position-x: 7.9rem;
+    background-size: 90vw 100%;
+    background-position-x: 4vw;
     background-position-y: -4rem;
     padding: 7.8rem $container-padding $container-padding * 2 $container-padding;
     position: relative;
@@ -322,14 +330,11 @@
 .app {
     background-image: url("../img/wave-app.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     margin-top: 3.75rem;
-    padding-top: 2.85rem;
-    padding-left: 11.25%;
-    padding-right: 11.25%;
+    padding: 2.85rem 11.25% 20rem 11.25%;
 
     display: flex;
-    // justify-content: center;
     align-items: center;
 
     &__img {
@@ -403,5 +408,160 @@
 }
 
 .footer {
+    color: $color-gray;
+    background-image: url('../img/wave-footer.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 
+    padding-top: 20rem;
+    margin-top: -17.2rem;
+    z-index: 2;
+
+    $m-left: -3.4%;
+
+    &__container-outer {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    &__container-inner {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        flex-grow: 1;
+        margin-left: 0.9vw;
+        margin-top: 2.7rem;
+    }
+
+    &__img-block {
+        display: flex;
+        height: 100%;
+
+        &--1 {
+            transform: translate(-11.8%, -9%);
+        }
+
+        &--2 {
+            height: 100%;
+            transform: rotateY(180deg);
+            margin-top: 1.6rem;
+            margin-right: 5.3rem;
+        }
+    }
+
+
+    &__logo {
+        line-height: 1rem;
+        height: 3rem;
+        color: $color-blue-dark;
+        display: inline-block;
+        margin-left: $m-left;
+        position: absolute;
+        top: -3rem;
+
+        &-icon {
+            fill: $color-primary;
+        }
+    }
+
+    $mt-text: 1.5rem;
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        margin-left: $m-left;
+        margin-top: $mt-text;
+    }
+
+    &__social {
+        display: flex;
+        margin-top: 1.7rem;
+
+        & > *:not(:last-child) {
+            margin-right: .7rem;
+        }
+        & > * {
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+            border: 2px $color-gray-light-3 solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s;
+            cursor: pointer;
+            user-select: none;
+
+            svg {
+                height: 1rem;
+                width: 1rem;
+                fill: $color-gray-light-3;
+            }
+        }
+        & > *:hover {
+            border: 2px $color-primary solid;
+
+            svg {
+                fill: $color-primary;
+            }
+        }
+        & > *:active {
+            transform: scale(.9);
+        }
+    }
+
+    &__menu {
+        display: flex;
+        margin-left: auto;
+        margin-top: $mt-text;
+        margin-right: 3rem;
+
+        &-item {
+            transition: all .3s;
+            padding: .4rem 0;
+            cursor: pointer;
+            overflow: hidden;
+            width: 100%;
+            @supports (width: fit-content) {
+                width: fit-content;
+            }
+
+            a::after {
+                content: " ";
+                width: 100%;
+                display: block;
+                height: 1px;
+                margin-top: 3px;
+                background-color: $color-primary;;
+                transition: all .3s;
+                transform: translateX(-100%);
+            }
+        }
+        &-item:hover {
+            color: $color-primary;
+
+            a::after {
+                transform: translateX(0);
+            }
+        }
+        &-item:first-child {
+            padding-top: 0;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 8.3rem;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        margin-top: -2rem;
+
+        span {
+            color: $color-primary;
+        }
+    }
 }
