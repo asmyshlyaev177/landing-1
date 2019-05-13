@@ -213,7 +213,6 @@
         }
 
         @include resp($bp-tablet) {
-            text-align: center;
             padding: calc(#{$container-padding-tablet} + 6rem) $container-padding-tablet $container-padding-tablet * 2 $container-padding-tablet;
         }
 
@@ -229,6 +228,10 @@
 
     &__title {
         margin-bottom: 2.6rem;
+
+        @include resp($bp-tablet) {
+            text-align: center;
+        }
     }
 
     &__left {
@@ -382,13 +385,16 @@
         padding-bottom: 8rem;
     }
 
-    @include resp($bp-laptop) {
-
+    @include resp($bp-tablet) {
+        h2, h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
     }
 
     @include resp($bp-tablet) {
         padding: $container-padding-tablet * 2 $container-padding-tablet;
-        padding-bottom: 8rem;
+        padding-bottom: 12rem;
     }
 
     &__title {
@@ -406,6 +412,10 @@
         padding: 10%;
         margin-top: -5.8%;
         margin-left: 0.5%;
+
+        @include resp($bp-tablet) {
+            padding: 10% 0;
+        }
     }
 
     &__img-map {
@@ -413,6 +423,12 @@
         height: 90%;
         margin-top: 3.8rem;
         margin-left: .3rem;
+
+        @include resp($bp-tablet) {
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+        }
     }
 
     &__img-phone {
@@ -421,6 +437,12 @@
         margin-left: -74.7%;
         transition: filter .6s, transform .6s;
         filter: drop-shadow(1rem 3rem 2rem rgba($color-gray, .9));
+
+        @include resp($bp-tablet) {
+            width: 80%;
+            height: 80%;
+            margin-left: -89.7%;
+        }
 
         &:hover {
             filter: drop-shadow(1rem 5rem 2.5rem rgba($color-gray, .8));
@@ -440,6 +462,26 @@
 
     @include resp($bp-laptop) {
         padding: 7.8rem $container-padding-laptop $container-padding-laptop * 2 $container-padding-laptop;
+        background-image: none;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            background-repeat: repeat-y;
+            background-size: contain;
+            background-position-x: 0;
+            background-position-y: 0;
+            background-image: url('../img/road.svg');
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+    }
+
+    @include resp($bp-tablet) {
+        padding: $container-padding-phone-m * 5 $container-padding-phone-m;
     }
 
     display: flex;
@@ -450,6 +492,23 @@
         position: absolute;
         top: -9.5rem;
         left: 13.3rem;
+
+        @include resp($bp-tablet) {
+            top: 0;
+            left: 0;
+            transform: translateX(50%);
+            width: 50vw;
+        }
+
+        @include resp($bp-phone-l) {
+            top: 0;
+            left: 0;
+        }
+
+        @include resp($bp-phone-m) {
+            top: 0;
+            left: 0;
+        }
     }
 
     &__img-tree {
@@ -460,16 +519,26 @@
             transform: scale(1.15);
             top: 4.2%;
             left: 13.2%;
+
+            @include resp($bp-phone-m) {
+                left: 0;
+                left: 1%;
+            }
         }
 
         &--2 {
             top: 45%;
             right: 10.5rem;
+
+            @include resp($bp-tablet) {
+                top: 55%;
+                right: 5%;
+            }
         }
 
         &--3 {
             transform: scale(.8);
-            top: 89.2%;
+            bottom: 2%;
             left: 12.4%;
         }
     }
@@ -484,17 +553,81 @@
         flex-basis: 65vw;
         flex-grow: 0;
 
-        @include resp($bp-laptop-l) {
 
+        &:nth-of-type(2n + 1) {
+            margin-left: -7.5rem;
+            margin-top: -3rem;
+
+            @include resp($bp-laptop) {
+                margin-left: 0;
+                margin-top: 5rem;
+            }
+
+            .feature__img {
+                margin-left: 4.2rem;
+                margin-right: 0;
+
+                @include resp($bp-tablet) {
+                    margin-left: 0;
+                }
+            }
+            .feature__text {
+                margin-left: 4.7rem;
+
+                @include resp($bp-tablet) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &:nth-of-type(2n + 2) {
+            margin-left: -1rem;
+            margin-top: -6rem;
+
+            @include resp($bp-laptop) {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .feature__img {
+                margin-left: 4.2rem;
+                margin-right: 0;
+                order: -1;
+
+                @include resp($bp-tablet) {
+                    margin-left: 0;
+                }
+            }
+            .feature__text {
+                margin-left: 4.7rem;
+
+                @include resp($bp-tablet) {
+                    margin-left: 0;
+                }
+            }
         }
 
         @include resp($bp-laptop) {
-            background-color: red;
+            align-items: center;
+            flex-basis: 100%;
+        }
+
+        @include resp($bp-tablet) {
+            padding: 7rem 0;
+            flex-direction: column;
+
+            &:not(:last-of-type) {
+                margin-top: 17rem;
+            }
         }
 
         &__text {
             margin-left: 0.9rem;
             flex-basis: 40%;
+
+            @include resp($bp-tablet) {
+                width: 70vw;
+            }
         }
 
         &__distance {
@@ -521,31 +654,10 @@
 
         &__img {
             margin-right: 4.8rem;
-        }
 
-
-        &:nth-of-type(2n + 1) {
-            margin-left: -7.5rem;
-            margin-top: -3rem;
-            .feature__img {
-                margin-left: 4.2rem;
-                margin-right: 0;
-            }
-            .feature__text {
-                margin-left: 4.7rem;
-            }
-        }
-
-        &:nth-of-type(2n + 2) {
-            margin-left: -1rem;
-            margin-top: -6rem;
-            .feature__img {
-                margin-left: 4.2rem;
-                margin-right: 0;
+            @include resp($bp-tablet) {
                 order: -1;
-            }
-            .feature__text {
-                margin-left: 4.7rem;
+                margin-bottom: 2rem;
             }
         }
 
