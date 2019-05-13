@@ -14,7 +14,8 @@
     "favicons": "node favicons.js",
     "sprites": "rm img/sprite.svg && svg-sprite-generate -d img/ -o img/sprite.svg",
     "build": "rm -rf css/* && npm-run-all compile:sass prefix:css compress:css favicons",
-    "start-prod": "npm-run-all build devserver"
+    "start-prod": "npm-run-all build devserver",
+    "github-pages": "gh-pages -s '{index.html,css/**/*,img/**/*}' -d './'"
   },
   "author": "asmyshlyaev177@gmail.com",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
     "favicons": "^5.3.0",
+    "gh-pages": "^2.0.1",
     "live-server": "^1.2.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
