@@ -1,0 +1,49 @@
+
+$color-white: #fff;
+$color-primary: #13f1fc;
+$color-primary-light: #B7E6FF;
+$color-blue-dark: #4F79A4;
+$color-gray: #A5ADB1;
+$color-gray-light: #C4C4C4;
+$color-gray-light-2: #C7CCE1;
+$color-gray-light-3: #BDD3DF;
+
+
+.h2 {
+    font-size: 3.125rem;
+    font-weight: 700;
+    color: $color-blue-dark;
+    margin-bottom: .9rem;
+    letter-spacing: 0.07rem;
+}
+
+.h3 {
+    font-size: 3.125rem;
+    color: $color-blue-dark;
+    font-family: $font-secondary;
+    font-weight: 300;
+    letter-spacing: -0.025rem;
+
+}
+
+.paragraph {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+
+    &--gray {
+        color: $color-gray;
+    }
+
+    &--blue {
+        color: $color-primary-light;
+    }
+}
+
+
+.white {
+    color: $color-white;
+}
+
+.gray {
+    color: $color-gray;
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE10">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- FAVICONS-START -->
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
+    <!-- FAVICONS-END -->
+
+    <title>CityMap project</title>
+  </head>
+
+  <body class="container">
+
+    <nav class="nav">
+        <div class="nav__menu">
+            <input type="checkbox">
+            <div class="nav__menu-mob">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+
+            </div>
+
+            <div class="logo nav__logo">
+                <svg class="nav__logo-icon icon logo__icon">
+                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg>
+                <div class="logo__text">CityMap</div>
+            </div>
+            <ul class="nav__menu-list">
+                <li class="nav__item"><a href="#">About Us</a></li>
+                <li class="nav__item"><a href="#">Find Place</a></li>
+                <li class="nav__item"><a href="#">City Map</a></li>
+                <li class="nav__item"><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <header class="header">
+
+        <div class="header__container">
+            <div class="header__left">
+                <h2 class="h2 white header__title">Search Your Destination</h2>
+                <p class="paragraph paragraph--blue header__paragraph">Then select departure date, how long the trip will be and how many destinations to include. Users can also select if they want to look at cities in Europe, the European Union or just the Schengen Zone. </p>
+
+                <form action="#" class="header__form">
+                    <svg class="icon search__icon header__icon header__icon-map">
+                        <use xlink:href="img/sprite.svg#icon-map"></use>
+                    </svg>
+
+                    <input class="header__input" placeholder="Find your place here"></input>
+                    <button class="btn header__search-button">
+                        <svg class="icon header__icon header__icon-search">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header__right">
+                <img src="./img/hero.png" alt="Header image" class="img header__img">
+            </div>
+        </div>
+
+    </header>
+
+    <section class="connect">
+        <h2 class="h2 connect__title">Get Start Search</h2>
+        <h3 class="h3">Connect with city map</h3>
+        <div class="connect__img-container">
+            <img src="./img/map1.png" alt="map background image" class="img connect__img-map">
+            <img src="./img/phone1.png" alt="phone image" class="img connect__img-phone">
+        </div>
+    </section>
+
+    <section class="features">
+
+        <span class="features__img-start">
+            <img src="./img/travelers.png" alt="Travelers image" class="img">
+        </span>
+        <span class="features__img-tree features__img-tree--1">
+            <img src="./img/tree.png" alt="tree image" class="img">
+        </span>
+
+        <div class="feature">
+            <div class="feature__text">
+                <div class="feature__distance">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#icon-map"></use>
+                    </svg>
+                    <span class="gray">2.0km</spa>
+                </div>
+                <div class="feature__title h2">BRAC ATM Booth</div>
+                <div class="feature__title h3">Connect with CityMap</div>
+                <p class="feature__paragraph paragraph gray">According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
+            </div>
+
+            <div class="feature__img">
+                <img src="./img/payments.png" alt="Payments image" class="img">
+            </div>
+        </div>
+
+        <span class="features__img-tree features__img-tree--2">
+            <img src="./img/tree.png" alt="tree image" class="img">
+        </span>
+
+        <div class="feature">
+            <div class="feature__text">
+                <div class="feature__distance">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#icon-map"></use>
+                    </svg>
+                    <span class="gray">5.0km</span>
+                </div>
+                <div class="feature__title h2">City Govt Hospital</div>
+                <div class="feature__title h3">Connect with CityMap</div>
+                <p class="feature__paragraph paragraph gray">According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
+            </div>
+
+            <div class="feature__img">
+                <img src="./img/medicine.png" alt="Medicine image" class="img">
+            </div>
+        </div>
+
+        <span class="features__img-tree features__img-tree--3">
+            <img src="./img/tree.png" alt="tree image" class="img">
+        </span>
+
+    </section>
+
+    <section class="app">
+        <div class="app__img">
+            <img src="./img/phone2.png" alt="Phone image" class="img">
+        </div>
+
+        <div class="app__text">
+            <div class="app__title h2 white">
+                CityMap App
+            </div>
+
+            <div class="app__paragraph paragraph">
+                According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder.
+            </div>
+
+            <div class="app__btn-container">
+                <div class="btn app__btn-download btn-download--android">
+                    <svg class="icon app__btn-icon">
+                        <use xlink:href="./img/sprite.svg#android"></use>
+                    </svg>
+                    <span>download</span>
+                </div>
+                <div class="btn app__btn-download btn-download--apple">
+                    <svg class="icon app__btn-icon">
+                        <use xlink:href="./img/sprite.svg#apple"></use>
+                    </svg>
+                    <span>download</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container-outer">
+            <div class="footer__img-block footer__img-block--1">
+                <img src="img/footer-left.svg" class="img" />
+            </div>
+
+
+            <div class="footer__container-inner">
+                <div class="footer__logo">
+                    <div class="logo">
+                        <svg class="icon logo__icon footer__logo-icon">
+                            <use xlink:href="img/sprite.svg#icon-map"></use>
+                        </svg>
+                        <div class="logo__text">CityMap</div>
+                    </div>
+                </div>
+
+                <div class="footer__text-container">
+
+                        <div class="footer__paragraph paragraph">
+                            Then select departure date, how long the trip will be and how many destinations to include. Users can also select if they want to look at cities in Europe, the European Union or just the Schengen Zone.
+                        </div>
+
+                        <div class="footer__social">
+                            <div class="icon icon-fb">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#fb"></use>
+                                </svg>
+                            </div>
+                            <div class="icon icon-tw">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#tw"></use>
+                                </svg>
+                            </div>
+                            <div class="icon icon-gp">
+                                <svg class="img" >
+                                    <use xlink:href="./img/sprite.svg#gp"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                </div>
+
+                <ul class="footer__menu">
+                    <div class="footer__menu-left">
+                        <li class="footer__menu-item"><a href="#">About us</a></li>
+                        <li class="footer__menu-item"><a href="#">Contact</a></li>
+                        <li class="footer__menu-item"><a href="#">FAQ</a></li>
+                        <li class="footer__menu-item"><a href="#">Map</a></li>
+                    </div>
+                    <div class="footer__menu-right">
+                        <li class="footer__menu-item"><a href="#">Blog</a></li>
+                        <li class="footer__menu-item"><a href="#">keywords</a></li>
+                        <li class="footer__menu-item"><a href="#">Email</a></li>
+                        <li class="footer__menu-item"><a href="#">Notification</a></li>
+                        <li class="footer__menu-item"><a href="#">Settings</a></li>
+                        <li class="footer__menu-item"><a href="#">Update</a></li>
+                    </div>
+                </ul>
+
+                <div class="footer__copyright">
+                    &copy; 2019, design by <span>Shabuj Khan</span>, CSS and markup by <span>asmyshlyaev177</span>
+                </div>
+            </div>
+
+
+            <div class="footer__img-block footer__img-block--2">
+                <img src="./img/lamp.svg" class="img" />
+            </div>
+
+        </div>
+
+    </footer>
+
+  </body>
+
+</html>
